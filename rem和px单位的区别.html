@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.ixiaer.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="1remw3c描述rem为：font size of the root element. (html标签font-size = 1rem) 1234567&amp;lt;p&amp;gt;inherit root element font-size&amp;lt;/p&amp;gt;&amp;lt;p class=&quot;is-rem&quot;&amp;gt;font-size rem&amp;lt;/p&amp;gt;&amp;lt;p class=&quot;is-px&quot;&amp;gt;font">
+<meta name="keywords" content="rem,px,css,响应式,viewport,meta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rem 和 px 单位的区别">
+<meta property="og:url" content="http://blog.ixiaer.com/rem和px单位的区别.html">
+<meta property="og:site_name" content="夏尔猫叔&#39;s Blog">
+<meta property="og:description" content="1remw3c描述rem为：font size of the root element. (html标签font-size = 1rem) 1234567&amp;lt;p&amp;gt;inherit root element font-size&amp;lt;/p&amp;gt;&amp;lt;p class=&quot;is-rem&quot;&amp;gt;font-size rem&amp;lt;/p&amp;gt;&amp;lt;p class=&quot;is-px&quot;&amp;gt;font">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog.ixiaer.com/images/mangren.jpg">
+<meta property="og:image" content="http://blog.ixiaer.com/images/user-fe-be.png">
+<meta property="og:updated_time" content="2020-11-17T11:08:09.882Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="rem 和 px 单位的区别">
+<meta name="twitter:description" content="1remw3c描述rem为：font size of the root element. (html标签font-size = 1rem) 1234567&amp;lt;p&amp;gt;inherit root element font-size&amp;lt;/p&amp;gt;&amp;lt;p class=&quot;is-rem&quot;&amp;gt;font-size rem&amp;lt;/p&amp;gt;&amp;lt;p class=&quot;is-px&quot;&amp;gt;font">
+<meta name="twitter:image" content="http://blog.ixiaer.com/images/mangren.jpg">
+
+<link rel="canonical" href="http://blog.ixiaer.com/rem和px单位的区别.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>rem 和 px 单位的区别 | 夏尔猫叔's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">夏尔猫叔's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">敏捷软件开发宣言前已宣誓✊</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404.html" rel="section"><i class="fa fa-fw fa-heartbeat"></i>Commonweal 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/rem和px单位的区别.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          rem 和 px 单位的区别
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-29 14:41:42" itemprop="dateCreated datePublished" datetime="2019-03-29T14:41:42+08:00">2019-03-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-17 19:08:09" itemprop="dateModified" datetime="2020-11-17T19:08:09+08:00">2020-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1rem"><a href="#1rem" class="headerlink" title="1rem"></a>1rem</h1><p>w3c描述rem为：font size of the root element. (html标签font-size = 1rem)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>inherit root element font-size<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"is-rem"</span>&gt;</span>font-size rem<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"is-px"</span>&gt;</span>font-size px<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">.is-rem &#123; font-size: 1rem;&#125;</span></span><br><span class="line"><span class="undefined">.is-px &#123; font-size: 16px; &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以上代码在Chrome浏览器中文字大小是一致的，但是在浏览器设置 <strong>字号改成”特大”</strong> 后 1rem 设置的字体变得很大、px设置的字体则没有变化，原因是 html 上默认 font-size 被浏览器设置的很大。</p>
+<h1 id="rem-和响应式完全没关系"><a href="#rem-和响应式完全没关系" class="headerlink" title="rem 和响应式完全没关系"></a>rem 和响应式完全没关系</h1><h5 id="Bootstrap-是用-px-来做屏幕区分"><a href="#Bootstrap-是用-px-来做屏幕区分" class="headerlink" title="Bootstrap 是用 px 来做屏幕区分"></a>Bootstrap 是用 px 来做屏幕区分</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* breakpoint-sm */</span></span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">576px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123; <span class="attribute">background</span>: red; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* breakpoint-md */</span></span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123; <span class="attribute">background</span>: green; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* breakpoint-lg */</span></span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">992px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123; <span class="attribute">background</span>: orange; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="ElementUI-是完全使用-px，并没有使用-rem"><a href="#ElementUI-是完全使用-px，并没有使用-rem" class="headerlink" title="ElementUI 是完全使用 px，并没有使用 rem"></a>ElementUI 是完全使用 px，并没有使用 rem</h5><p>ElementUI做响应式App非常优秀。</p>
+<h1 id="rem-其实是为了用户体验"><a href="#rem-其实是为了用户体验" class="headerlink" title="rem 其实是为了用户体验"></a>rem 其实是为了用户体验</h1><p>在欧美国家非常重视用户体验，残障人士的用户体验也是非常重视也有法规来保护弱势群体。<br>比如：tts(text to speech)是为视力缺陷者提供的文字转语音的服务，浏览器设置中的字号也是为视力缺陷者提供的非常重要的服务。</p>
+<h4 id="反用户体验，被妖魔化的-rem"><a href="#反用户体验，被妖魔化的-rem" class="headerlink" title="反用户体验，被妖魔化的 rem"></a>反用户体验，被妖魔化的 rem</h4><p>有很多的老文章用 flexible.js 或者 rem.js 等包来完成rem自适应功能，甚至有很多人基于此类思想写了各种各样的奇怪的包。<br><a href="https://github.com/amfe/lib-flexible" target="_blank" rel="noopener">amfe-flexible</a> 是 Alibaba MFE 团队在2016年 flexible 自适应布局中使用了 rem 单位，并且对 html 标签中的 font-size 做了动态计算。当时这种做法很超前非常不错，但是在2018年1月宣布建议用户使用viewport方案。</p>
+<p>但是百度上搜索rem时依然出现很多 flexible.js 方案误导。rem.js 会动态设置 html 标签上的 font-size，会导致系统/浏览器设置的字体大小不会生效，视觉残障人士可用性被扼杀。在则浏览器窗口发生改变时一直在重新计算所有的 rem 单位数值降低性能。</p>
+<p>甚至有些团队设置 font-size:10px，只是为了写代码时 px 与 rem 换算方便而已，这岂不是对视力残障人士的一种不负责任？</p>
+<p><img src="images/mangren.jpg" alt="mangren.jpg"></p>
+<h1 id="什么时候应该用-rem？"><a href="#什么时候应该用-rem？" class="headerlink" title="什么时候应该用 rem？"></a>什么时候应该用 rem？</h1><ul>
+<li>文字应该使用 rem 单位</li>
+<li>细线、位图使用 px 单位</li>
+<li>布局请不要持用 rem 或者 px，而是选择 element/bootstrap/… 框架中的 layout</li>
+</ul>
+<p><img src="images/user-fe-be.png" alt="user-fe-be.png"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/rem/" rel="tag"># rem</a>
+              <a href="/tags/px/" rel="tag"># px</a>
+              <a href="/tags/css/" rel="tag"># css</a>
+              <a href="/tags/响应式/" rel="tag"># 响应式</a>
+              <a href="/tags/viewport/" rel="tag"># viewport</a>
+              <a href="/tags/meta/" rel="tag"># meta</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/code-lint-配置与使用.html" rel="prev" title="code lint 配置与使用">
+      <i class="fa fa-chevron-left"></i> code lint 配置与使用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/webpack编译原理.html" rel="next" title="webpack编译原理">
+      webpack编译原理 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1rem"><span class="nav-number">1.</span> <span class="nav-text">1rem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rem-和响应式完全没关系"><span class="nav-number">2.</span> <span class="nav-text">rem 和响应式完全没关系</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Bootstrap-是用-px-来做屏幕区分"><span class="nav-number">2.0.0.0.1.</span> <span class="nav-text">Bootstrap 是用 px 来做屏幕区分</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ElementUI-是完全使用-px，并没有使用-rem"><span class="nav-number">2.0.0.0.2.</span> <span class="nav-text">ElementUI 是完全使用 px，并没有使用 rem</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rem-其实是为了用户体验"><span class="nav-number">3.</span> <span class="nav-text">rem 其实是为了用户体验</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#反用户体验，被妖魔化的-rem"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">反用户体验，被妖魔化的 rem</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么时候应该用-rem？"><span class="nav-number">4.</span> <span class="nav-text">什么时候应该用 rem？</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="夏尔猫叔"
+      src="/favicon.png">
+  <p class="site-author-name" itemprop="name">夏尔猫叔</p>
+  <div class="site-description" itemprop="description">前端工程师技术文章</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">夏尔猫叔</span>
+</div>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

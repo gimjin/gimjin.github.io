@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.ixiaer.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="软硬件技术的高速发展成就了很多高分辨率的产品，但给用户带来了越来越小的内容（高分辨率 window 笔记本，应该深有体会）。我们真正需要的用户体验是，高分辨率带来的 细腻的视觉体验 和不同尺寸屏幕下呢个看到 相同寸的内容。   Viewport 他来了，他可以完美解决上述问题   MDN 解释：它提供有关视口初始大小的提示，仅供移动设备使用。 前端研发理解：Viewport 将 px 单位从描述">
+<meta name="keywords" content="px,css,viewport,meta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是 Viewport">
+<meta property="og:url" content="http://blog.ixiaer.com/什么是-Viewport.html">
+<meta property="og:site_name" content="夏尔猫叔&#39;s Blog">
+<meta property="og:description" content="软硬件技术的高速发展成就了很多高分辨率的产品，但给用户带来了越来越小的内容（高分辨率 window 笔记本，应该深有体会）。我们真正需要的用户体验是，高分辨率带来的 细腻的视觉体验 和不同尺寸屏幕下呢个看到 相同寸的内容。   Viewport 他来了，他可以完美解决上述问题   MDN 解释：它提供有关视口初始大小的提示，仅供移动设备使用。 前端研发理解：Viewport 将 px 单位从描述">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://blog.ixiaer.com/images/diff.jpg">
+<meta property="og:image" content="http://blog.ixiaer.com/images/viewport-demo.png">
+<meta property="og:image" content="http://blog.ixiaer.com/images/viewport.png">
+<meta property="og:image" content="http://blog.ixiaer.com/images/iphone-diff.png">
+<meta property="og:image" content="http://blog.ixiaer.com/images/mydevice.png">
+<meta property="og:image" content="http://blog.ixiaer.com/images/design.png">
+<meta property="og:updated_time" content="2020-11-17T11:08:09.882Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="什么是 Viewport">
+<meta name="twitter:description" content="软硬件技术的高速发展成就了很多高分辨率的产品，但给用户带来了越来越小的内容（高分辨率 window 笔记本，应该深有体会）。我们真正需要的用户体验是，高分辨率带来的 细腻的视觉体验 和不同尺寸屏幕下呢个看到 相同寸的内容。   Viewport 他来了，他可以完美解决上述问题   MDN 解释：它提供有关视口初始大小的提示，仅供移动设备使用。 前端研发理解：Viewport 将 px 单位从描述">
+<meta name="twitter:image" content="http://blog.ixiaer.com/images/diff.jpg">
+
+<link rel="canonical" href="http://blog.ixiaer.com/什么是-Viewport.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>什么是 Viewport | 夏尔猫叔's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">夏尔猫叔's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">敏捷软件开发宣言前已宣誓✊</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404.html" rel="section"><i class="fa fa-fw fa-heartbeat"></i>Commonweal 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/什么是-Viewport.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          什么是 Viewport
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-06-24 18:11:59" itemprop="dateCreated datePublished" datetime="2019-06-24T18:11:59+08:00">2019-06-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-17 19:08:09" itemprop="dateModified" datetime="2020-11-17T19:08:09+08:00">2020-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>软硬件技术的高速发展成就了很多高分辨率的产品，但给用户带来了越来越小的内容（高分辨率 window 笔记本，应该深有体会）。<br>我们真正需要的用户体验是，高分辨率带来的 <strong>细腻的视觉体验</strong> 和不同尺寸屏幕下呢个看到 <strong>相同寸的内容</strong>。</p>
+<p><img src="images/diff.jpg" alt="diff.jpg"></p>
+<blockquote>
+<p>Viewport 他来了，他可以完美解决上述问题</p>
+</blockquote>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta" target="_blank" rel="noopener">MDN 解释</a>：它提供有关视口初始大小的提示，仅供移动设备使用。</li>
+<li>前端研发理解：<u>Viewport 将 px 单位从描述 <strong>设备像素</strong> 转成 <strong>CSS像素</strong>(无限接近物理尺寸)。</u></li>
+</ul>
+<hr>
+<h3 id="🤔-理论求证"><a href="#🤔-理论求证" class="headerlink" title="🤔 理论求证"></a>🤔 理论求证</h3><p>为了便于理解我准备了如下表格两个虚拟设备 A 和 B</p>
+<table>
+<thead>
+<tr>
+<th>设备</th>
+<th>设备像素</th>
+<th>CSS像素</th>
+<th>像素比DPR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设备A</td>
+<td>8 x 8</td>
+<td>4 x 4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>设备B</td>
+<td>4 x 4</td>
+<td>4 x 4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/viewport-demo.png" alt="viewport-demo.png"></p>
+<h5 id="像素并非像素"><a href="#像素并非像素" class="headerlink" title="像素并非像素"></a>像素并非像素</h5><p>近年来，屏幕分辨率已经涨到人眼难以区分单个像素大小的程度。例如，最近的智能手机通常具有5英寸屏幕，分辨率高达1920-1080像素（~400dpi）。因此，许多浏览器让每个 <strong>CSS像素</strong> 对应多个 <strong>硬件像素</strong> ，以便在很小的物理尺寸上显示的页面能看清楚。最初这样做在许多触控优化的网站上有可用性和可读性问题， Peter-Paul Koch 在 <a href="http://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html" target="_blank" rel="noopener">A pixel is not a pixel</a> 中写到过。</p>
+<p>在高 dpi 屏幕上，设备像素比(DPR) = 1 的页面将被浏览器有效缩放。他们的文字将是流畅和清晰的，但位图图像可能无法利用全屏分辨率。为了在这些屏幕上获得更清晰的图像，Web开发人员可能希望以比其最终大小更高的比例设计图像（或整个布局），然后使用CSS或视口属性缩小它们。这与<a href="http://www.w3.org/TR/CSS2/syndata.html#length-units" target="_blank" rel="noopener">CSS 2.1标准</a>一致。</p>
+<hr>
+<h3 id="📐原理图"><a href="#📐原理图" class="headerlink" title="📐原理图"></a>📐原理图</h3><p><img src="images/viewport.png" alt="viewport.png"></p>
+<hr>
+<h3 id="🤓-真机效果"><a href="#🤓-真机效果" class="headerlink" title="🤓 真机效果"></a>🤓 真机效果</h3><p><img src="images/iphone-diff.png" alt="iphone-diff.png"></p>
+<hr>
+<h3 id="🖥-如何获得设备参数"><a href="#🖥-如何获得设备参数" class="headerlink" title="🖥 如何获得设备参数"></a>🖥 如何获得设备参数</h3><p>获取设备参数网址：<a href="http://www.mydevice.io" target="_blank" rel="noopener">http://www.mydevice.io</a></p>
+<p><img src="images/mydevice.png" alt="mydevice.png"></p>
+<h5 id="或者用-Javascript-方法获得参数"><a href="#或者用-Javascript-方法获得参数" class="headerlink" title="或者用 Javascript 方法获得参数"></a>或者用 Javascript 方法获得参数</h5><ul>
+<li>DPR：window.devicePixelRatio</li>
+<li>size：screen.width 和 screen.height</li>
+<li>Root font size（1rem）：window.getComputedStyle(document.getElementsByTagName(“html”)[0]).fontSize</li>
+</ul>
+<hr>
+<h3 id="💎-分析设计师提供的设计稿"><a href="#💎-分析设计师提供的设计稿" class="headerlink" title="💎 分析设计师提供的设计稿"></a>💎 分析设计师提供的设计稿</h3><p><strong>1，了解要兼容的设备重要参数</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>iPhone 3gs</th>
+<th>iPhone SE</th>
+<th>iPhone 8 Plus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设备像素 px</td>
+<td>480 x 320</td>
+<td>1136 x 640</td>
+<td>1920 x 1080</td>
+</tr>
+<tr>
+<td>CSS像素 px</td>
+<td>480 x 320</td>
+<td>568 x 320</td>
+<td>640 x 360</td>
+</tr>
+<tr>
+<td>DPR</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2，解读设计稿</strong></p>
+<p><img src="images/design.png" alt="design.png"></p>
+<p>a，标题字号为 <strong>150px</strong>，设计稿相对应的 DPR 是 3，所以实际在代码中要写 50px。<br><em>转换公式：</em><span style="color: red;">设备像素 / DPR = CSS像素</span></p>
+<p>b，位图不太一样，因为每个 <strong>CSS像素</strong> 由9个 <strong>设备像素</strong> 呈现，每个 <strong>设备像素</strong> 颜色都可以独立像素呈现不同颜色，选择比CSS像素大3倍像素的图片会非常细腻。<br>所以按照 DPR 提供 @3x @2x @1x 的切图，也可以只用最大尺寸的位图也是可以的，只不过对于低 DPR 的设备从服务器上获取位图增加了下载时间，但是实际效果却不会细腻。</p>
+<hr>
+<h3 id="💎-Viewport-改变了我们"><a href="#💎-Viewport-改变了我们" class="headerlink" title="💎 Viewport 改变了我们"></a>💎 Viewport 改变了我们</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>之前</th>
+<th>现在</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>位图</td>
+<td>对应容器宽高为100px的背景图用宽高100px的图片即可</td>
+<td>对应多个DPR的多种尺寸位图</td>
+</tr>
+<tr>
+<td>图标</td>
+<td>用雪碧图</td>
+<td>用自适应大小的iconfont/svg</td>
+</tr>
+<tr>
+<td>设计师</td>
+<td>设计师用位图软件设计 （Photoshop）</td>
+<td>设计师用矢量图设计单位是CSS像素单位<br>输出时工具会生成 1x 2x 3x 尺寸的位图（Sketch）</td>
+</tr>
+<tr>
+<td>兼容性</td>
+<td>之前只想着浏览器兼容</td>
+<td>还要思考兼容设备</td>
+</tr>
+<tr>
+<td>单位</td>
+<td>px, em, %</td>
+<td>px, rem, %, em, vw/vh/vmin/vmax, calc()</td>
+</tr>
+<tr>
+<td>布局</td>
+<td>float, flexbox</td>
+<td>element/bootstrap/… layout</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>未来是5G时代，任何东西都有可能安装屏幕。所以我们前端人应该面向未来。</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/px/" rel="tag"># px</a>
+              <a href="/tags/css/" rel="tag"># css</a>
+              <a href="/tags/viewport/" rel="tag"># viewport</a>
+              <a href="/tags/meta/" rel="tag"># meta</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/webpack编译原理.html" rel="prev" title="webpack编译原理">
+      <i class="fa fa-chevron-left"></i> webpack编译原理
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/基于vuex的开发模式和使用方法.html" rel="next" title="基于vuex的开发模式和使用方法">
+      基于vuex的开发模式和使用方法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#🤔-理论求证"><span class="nav-number">1.</span> <span class="nav-text">🤔 理论求证</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#像素并非像素"><span class="nav-number">1.0.1.</span> <span class="nav-text">像素并非像素</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#📐原理图"><span class="nav-number">2.</span> <span class="nav-text">📐原理图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#🤓-真机效果"><span class="nav-number">3.</span> <span class="nav-text">🤓 真机效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#🖥-如何获得设备参数"><span class="nav-number">4.</span> <span class="nav-text">🖥 如何获得设备参数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#或者用-Javascript-方法获得参数"><span class="nav-number">4.0.1.</span> <span class="nav-text">或者用 Javascript 方法获得参数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#💎-分析设计师提供的设计稿"><span class="nav-number">5.</span> <span class="nav-text">💎 分析设计师提供的设计稿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#💎-Viewport-改变了我们"><span class="nav-number">6.</span> <span class="nav-text">💎 Viewport 改变了我们</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="夏尔猫叔"
+      src="/favicon.png">
+  <p class="site-author-name" itemprop="name">夏尔猫叔</p>
+  <div class="site-description" itemprop="description">前端工程师技术文章</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">夏尔猫叔</span>
+</div>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

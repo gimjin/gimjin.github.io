@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.ixiaer.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="前端工程师技术文章">
+<meta name="keywords" content="f2e, vue, react, html, css, javascript, web, CI&#x2F;CD, 前端, blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="夏尔猫叔&#39;s Blog">
+<meta property="og:url" content="http://blog.ixiaer.com/index.html">
+<meta property="og:site_name" content="夏尔猫叔&#39;s Blog">
+<meta property="og:description" content="前端工程师技术文章">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="夏尔猫叔&#39;s Blog">
+<meta name="twitter:description" content="前端工程师技术文章">
+
+<link rel="canonical" href="http://blog.ixiaer.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>夏尔猫叔's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">夏尔猫叔's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">敏捷软件开发宣言前已宣誓✊</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404.html" rel="section"><i class="fa fa-fw fa-heartbeat"></i>Commonweal 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/Understanding-the-GitHub-flow.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/Understanding-the-GitHub-flow.html" class="post-title-link" itemprop="url">了解GitHub流程（Understanding the GitHub flow）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-11-17 18:49:50 / Modified: 19:08:09" itemprop="dateCreated datePublished" datetime="2020-11-17T18:49:50+08:00">2020-11-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="images/team.svg" alt="team.svg"></p>
+<p>GitHub flow 是一个轻量级的，基于分支的工作流，它支持定期进行部署的团队和项目。 本指南说明了GitHub flow 的工作方式和原因。</p>
+<h6 id="专业提示"><a href="#专业提示" class="headerlink" title="专业提示"></a>专业提示</h6><p>目前 Git 是最流行的、<strong>分布式版本控制系统</strong>。而不是代码管理工具，更不是代码仓库那么简单！</p>
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><p><img src="images/github-flow-create-branch.png" alt="github-flow-create-branch.png"></p>
+<p>当你进行一个项目的工作时，随着项目的推进在某一时间段，你会有一些的不同的意见（features）或想法，其中一些会有用，一些会没用。分支帮你管理这些工作流。  当你创建了一个项目分支，相当于创建了一个可以尝试任何新想法的区域。在这个分支上的更改不会影响 main 分支，这样你就可以随意进行试验并且提交修改，并且不用担心你的分支会合并，直到它已经准备好了去被你的合作者去检查（review）。</p>
+<h6 id="专业提示-1"><a href="#专业提示-1" class="headerlink" title="专业提示"></a>专业提示</h6><p>分支是Git中的核心概念，整个GitHub Flow就是基于此。只有一条规矩：<code>main</code> 分支上的东西永远是可部署的。因此，在开发新功能或修订缺陷时，要从main之外创建新分支是非常重要的。你的分支名称应该是描述性的（例如：<code>refactor-authentication</code>, <code>user-content-cache-key</code>, <code>make-retina-avatars</code>），这样其他人可以看到正在做什么。</p>
+<h3 id="添加提交"><a href="#添加提交" class="headerlink" title="添加提交"></a>添加提交</h3><p><img src="images/github-flow-add-commits.png" alt="github-flow-add-commits.png"></p>
+<p>创建分支后，就可以开始进行更改了。无论何时添加，编辑或删除文件，都在进行提交，并将其添加到分支中。 添加提交的过程可以跟踪您在功能分支上工作的进度。</p>
+<p>提交还会为您的工作创建透明的历史记录，其他人可以参考该历史记录来了解您的工作以及原因。 每个提交都有一个关联的提交消息，该消息是说明为什么进行特定更改的说明。 此外，每次提交都被视为一个单独的更改单元。 如果发现错误或决定朝其他方向前进，则可以回滚更改。</p>
+<h6 id="专业提示-2"><a href="#专业提示-2" class="headerlink" title="专业提示"></a>专业提示</h6><p>提交消息很重要，尤其是因为Git会跟踪您的更改，然后将它们显示为提交后将它们显示在服务器上。 通过编写清晰的提交消息，您可以使其他人更容易跟进并提供反馈。</p>
+<h3 id="打开一个拉取请求（PR）"><a href="#打开一个拉取请求（PR）" class="headerlink" title="打开一个拉取请求（PR）"></a>打开一个拉取请求（PR）</h3><p><img src="images/github-flow-merge-request.png" alt="github-flow-merge-request.png"></p>
+<p>“拉取请求”引发有关提交的讨论。 由于它们与基础Git存储库紧密集成，因此任何人都可以确切地看到如果接受您的请求将合并哪些更改。</p>
+<p>您可以在开发过程中的任何时候打开“拉取请求”：当您的代码很少或没有代码，但想共享一些屏幕截图或一般性想法时，遇到困难需要帮助或建议时，或者准备为某人准备时 查看您的工作。 通过在拉取请求消息中使用 GitHub 的 @mention 系统，您可以要求特定人员或团队提供反馈，无论他们是在大厅还是十个时区之外。</p>
+<h6 id="专业提示-3"><a href="#专业提示-3" class="headerlink" title="专业提示"></a>专业提示</h6><p>“拉取请求”有助于开源项目和管理共享存储库的更改。 如果您使用的是 Fork＆Pull 模型，则“拉取请求”提供了一种通知项目维护者您希望他们考虑的更改的方法。如果您使用的是共享存储库模型，则“拉取请求”可在合并到主分支之前帮助您开始代码审查和有关建议更改的对话。</p>
+<h3 id="讨论并检查您的代码"><a href="#讨论并检查您的代码" class="headerlink" title="讨论并检查您的代码"></a>讨论并检查您的代码</h3><p><img src="images/github-flow-discuss.png" alt="github-flow-discuss.png"></p>
+<p>打开“拉取请求”后，审阅您的更改的人员或团队可能会有疑问或意见。 可能是编码风格与项目准则不符，更改缺少单元测试，或者看起来一切都很好并且道具井井有条。 提取请求旨在鼓励和捕获这种类型的对话。</p>
+<p>您还可以根据有关提交的讨论和反馈继续推送到分支机构。 如果有人评论您忘记做某事，或者代码中有错误，则可以在分支机构中对其进行修复，然后进行更改。 GitHub将在统一的“拉取请求”视图中显示您的新提交以及您可能收到的任何其他反馈。</p>
+<h6 id="专业提示-4"><a href="#专业提示-4" class="headerlink" title="专业提示"></a>专业提示</h6><p>拉取请求注释是用Markdown编写的，因此您可以嵌入图像和表情符号，使用预格式化的文本块以及其他轻量级格式。</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p><img src="images/github-flow-deploy.png" alt="github-flow-deploy.png"></p>
+<p>使用 GitHub，您可以从分支进行部署，以便在合并到 main 分支之前进行的最终生产测试。</p>
+<p>审核拉取请求并且分支通过测试后，您可以部署在生产环境中进行验证。如果分支代码引起问题，则可以通过将现有的 main 分支部署到生产中来回滚。</p>
+<p>不同的团队可能有不同的部署策略。 对于某些人来说，最好将其部署到专门配置的测试环境中。 对于其他人，基于工作流中的其他元素，直接部署到生产环境可能是更好的选择。</p>
+<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><p><img src="images/github-flow-merge.png" alt="github-flow-merge.png"></p>
+<p>既然您的更改已在生产环境中得到验证，是时候将代码合并到 main 分支中了。</p>
+<p>合并后，拉取请求会保留代码历史更改的记录。 因为它们是可搜索的，所以它们使任何人都能及时返回以了解做出决定的原因和方式。</p>
+<h6 id="专业提示-5"><a href="#专业提示-5" class="headerlink" title="专业提示"></a>专业提示</h6><p>通过将某些关键字合并到“拉取请求”的文本中，可以将问题与代码关联。 合并您的“拉取请求”时，也会关闭相关问题。 例如，输入短语 <code>Closes #32</code> 将关闭存储库中的问题编号32。 有关更多信息，请查看我们的 <a href="https://help.github.com/articles/closing-issues-via-commit-messages" target="_blank" rel="noopener">帮助文章</a>。</p>
+<h1 id="基于-Github-Flow-创建过的流水线"><a href="#基于-Github-Flow-创建过的流水线" class="headerlink" title="基于 Github Flow 创建过的流水线"></a>基于 Github Flow 创建过的流水线</h1><p><img src="images/git-flow-map.png" alt="gitflow-map"></p>
+<h6 id="专业建议"><a href="#专业建议" class="headerlink" title="专业建议"></a>专业建议</h6><p>版本号规范请查看 <a href="https://semver.org/lang/zh-CN/" target="_blank" rel="noopener">SemVer 语义化版本</a></p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://guides.github.com/introduction/flow/" target="_blank" rel="noopener">https://guides.github.com/introduction/flow/</a></li>
+<li><a href="https://guides.github.com/pdfs/githubflow-online.pdf" target="_blank" rel="noopener">https://guides.github.com/pdfs/githubflow-online.pdf</a></li>
+<li><a href="https://docs.gitlab.com/ee/university/training/gitlab_flow.html" target="_blank" rel="noopener">https://docs.gitlab.com/ee/university/training/gitlab_flow.html</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/markdown.html#gitlab-flavored-markdown-gfm" target="_blank" rel="noopener">https://docs.gitlab.com/ee/user/markdown.html#gitlab-flavored-markdown-gfm</a></li>
+<li><a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" rel="noopener">https://nvie.com/posts/a-successful-git-branching-model/</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/infrastructure-as-code.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/infrastructure-as-code.html" class="post-title-link" itemprop="url">基础设施即代码（infrastructure as code）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-11-17 13:21:00 / Modified: 19:08:09" itemprop="dateCreated datePublished" datetime="2020-11-17T13:21:00+08:00">2020-11-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="基础设施即代码"><a href="#基础设施即代码" class="headerlink" title="基础设施即代码"></a>基础设施即代码</h1><p><img src="images/基础设施即代码.png" alt="基础设施即代码"></p>
+<h4 id="通过“奶茶”理解基础设施即代码："><a href="#通过“奶茶”理解基础设施即代码：" class="headerlink" title="通过“奶茶”理解基础设施即代码："></a>通过“奶茶”理解基础设施即代码：</h4><p>喝奶茶的用户有很多不同需求 如：口味不同、茶杯不同、温度不同、包装不同、套餐不同等。</p>
+<p>奶茶企业并不是在做奶茶，而是在做能为客户提供 <code>持续制茶</code> 和 <code>持续交付</code> 的基础设施。目的是为客户提供 高效、低耗、灵活、准时地生产合格产品，为客户提供满意服务。</p>
+<h6 id="举一些例子对号入座："><a href="#举一些例子对号入座：" class="headerlink" title="举一些例子对号入座："></a>举一些例子对号入座：</h6><ul>
+<li>制茶设备：feature code（如：橙色的页面）</li>
+<li>杯子：image code（如：docker image，可以运行在 linux docker container 中）</li>
+<li>传送皮带：pipeline code（如：jekinsfile）</li>
+<li>制茶设备控制器：configure code（如：nacos 配置文件）</li>
+<li>测试设备：unit test/e2e test code（如：cypress，jest 代码）</li>
+<li>售货车：package publish code（如：Alibaba ECS 或 Serverless）</li>
+</ul>
+<h4 id="基础设施即代码有四项关键原则："><a href="#基础设施即代码有四项关键原则：" class="headerlink" title="基础设施即代码有四项关键原则："></a>基础设施即代码有四项关键原则：</h4><ul>
+<li><strong>再生性：</strong>环境中的任何元素可以轻松复制。</li>
+<li><strong>一致性：</strong>无论何时，创建的环境各个元素的配置是完全相同的。</li>
+<li><strong>快速反馈：</strong>能够频繁、容易地进行变更，并快速知道变更是否正确。</li>
+<li><strong>可见性：</strong>所有对环境的变更应该容易理解、<strong>可审计、受版本控制</strong>。</li>
+</ul>
+<h4 id="基础设施即代码的目标是："><a href="#基础设施即代码的目标是：" class="headerlink" title="基础设施即代码的目标是："></a>基础设施即代码的目标是：</h4><ul>
+<li><strong>标准化：</strong>以代码来定义环境，实现开发环境、测试环境、生产环境的标准化。</li>
+<li><strong>自动化：</strong>以自动化工具来驱动代码准备环境。包括创建环境、更新环境以及销毁环境。</li>
+<li><strong>可视化：</strong>以监控来可视化环境信息。环境当前状态可视、<strong>环境变更历史可视、可追溯</strong>。</li>
+</ul>
+<h5 id="您是什么角色，交付物到底是什么？"><a href="#您是什么角色，交付物到底是什么？" class="headerlink" title="您是什么角色，交付物到底是什么？"></a>您是什么角色，交付物到底是什么？</h5><ul>
+<li><p>程序员：软件代码（Code）</p>
+</li>
+<li><p><span style="color: red;">开发经理：不是软件，而是基础设施（Git Repo）</span></p>
+</li>
+</ul>
+<h1 id="基础设施装进-Git-Repo"><a href="#基础设施装进-Git-Repo" class="headerlink" title="基础设施装进 Git Repo"></a>基础设施装进 Git Repo</h1><p>如果认同基础设施即代码理念，则要把基础设施以代码的形式装入 Git Repo。那以什么样的流程装入呢？</p>
+<h4 id="先了解-Git-flow"><a href="#先了解-Git-flow" class="headerlink" title="先了解 Git flow"></a>先了解 Git flow</h4><p>Git Flow 通常说的是 <strong>Vincent Driessen</strong> 在 Tuesday, January 05, 2010 写的 <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" rel="noopener">A successful Git branching model</a> ，但是10 年后的 2020 年他在博客中留言，片段如下：</p>
+<blockquote>
+<p>Note of reflection (March 5, 2020) Vincent Driessen</p>
+<p>这个模型是在 2010 年构思出来的，而现在距今已有 10 多年了，Git 本身也才诞生不久。在那10年中，git-flow（本文介绍的<strong>分支模型</strong>）在许多软件团队中变得非常流行，以至于人们开始将其视为某种标准，但不幸的是，它也被当作教条或灵丹妙药。</p>
+<p>…</p>
+<p>如果您的团队正在持续交付软件，我建议您采用更简单的<strong>工作流程</strong>（例如 GitHub flow），而不是尝试将git-flow引入您的团队。</p>
+<p>…</p>
+</blockquote>
+<p><img src="images/基础设施即代码-git-repo.png" alt="基础设施即代码-git-repo"></p>
+<p>所以您用 <code>敏捷开发价值观</code> 正在持续交付软件，建议使用 GitHub flow 把代码有效的装入 Git Repo。</p>
+<p>请继续阅读 <a href="/Understanding-the-GitHub-flow.html">Understanding the GitHub flow 中文翻译</a></p>
+<hr>
+<h1 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h1><p>基础设施即代码只是把奶茶生产流水线做出来了，它并不会自己运行制造奶茶。</p>
+<ul>
+<li>我们可以学习 <a href="http://blog.ixiaer.com/Continuous-Integration-CI-with-GitLab.html">CI/CD 关键知识</a>（只写了部分内容，持续更新）</li>
+</ul>
+<p>持续运转生产流水线持续制茶和交付怎么办？客户喝了以后如何反馈？反馈后怎么优化升级生产流水线？流水线怎么监控？等等问题</p>
+<ul>
+<li>DevOps 会给我们一个满意的答案（文章暂时尚未开始写）</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/Continuous-Integration-CI-with-GitLab.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/Continuous-Integration-CI-with-GitLab.html" class="post-title-link" itemprop="url">CI/CD 关键知识</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-10-21 15:03:00" itemprop="dateCreated datePublished" datetime="2020-10-21T15:03:00+08:00">2020-10-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-17 19:08:09" itemprop="dateModified" datetime="2020-11-17T19:08:09+08:00">2020-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-Continuous-integration-is-built-in"><a href="#1-Continuous-integration-is-built-in" class="headerlink" title="1) Continuous integration is built-in"></a>1) Continuous integration is built-in</h2><p><img src="images/ci-cd-test-deploy-illustration_2x.png" alt="ci-cd-test-deploy-illustration_2x"></p>
+<p><strong>持续集成(CI)</strong>致力于将您的团队提供的代码集成到共 Shared Repository 中。开发人员在合并请求中共享新代码。在合并已修改代码之前，该请求触发构建 Pipline，构建，测试和验证新代码。</p>
+<p>通过结构化的部署 Pipline <strong>持续交付(CD)</strong>，确保将 CI 验证的代码交付到您的应用程序。</p>
+<p>CI 和 CD 一起帮助您的团队从客户和参与人更快的获得交付反馈。CI 可帮助您在开发周期的早期发现并消除错误，而 CD 可确保仅将经过验证的代码发送到您的应用程序。</p>
+<p>CI和CD必须共同努力以帮助您的团队快速有效的构建，这对于全面优化的软件开发至关重要。</p>
+<hr>
+<h2 id="2-Why-your-team-needs-a-CI-CD-workflow"><a href="#2-Why-your-team-needs-a-CI-CD-workflow" class="headerlink" title="2) Why your team needs a CI/CD workflow"></a>2) Why your team needs a CI/CD workflow</h2><h4 id="CD-CI-workflow"><a href="#CD-CI-workflow" class="headerlink" title="CD/CI workflow"></a>CD/CI workflow</h4><p><img src="images/cicd_pipeline_infograph.png" alt="cicd_pipeline_infograph.png"></p>
+<h4 id="Continuous-integration-CI"><a href="#Continuous-integration-CI" class="headerlink" title="Continuous integration (CI)"></a>Continuous integration (CI)</h4><ul>
+<li><strong>尽快发现错误：</strong>在解决问题时代码在开发人员的脑中十分新鲜</li>
+<li><strong>减少集成问题：</strong>较小的问题更易于消化和解决</li>
+<li><strong>避免复合问题：</strong>使团队开发更快，更自信</li>
+</ul>
+<h4 id="Continuous-delivery-CD"><a href="#Continuous-delivery-CD" class="headerlink" title="Continuous delivery (CD)"></a>Continuous delivery (CD)</h4><ul>
+<li><strong>确保每个更改都是可发布的：</strong>在完成之前测试所有内容，包括部署</li>
+<li><strong>降低每次发布的风险：</strong>使发布“无聊”</li>
+<li><strong>更加频繁地实现价值：</strong>可靠的部署意味着更多的发布</li>
+<li><strong>紧密的客户反馈循环：</strong>快速而频繁的获得客户对变更的反馈</li>
+</ul>
+<h6 id="ProTip"><a href="#ProTip" class="headerlink" title="ProTip"></a>ProTip</h6><p>部署有多种方式：比如蓝绿部署、金丝雀部署等。</p>
+<hr>
+<h2 id="3-Remember-Infrastructure-as-Code"><a href="#3-Remember-Infrastructure-as-Code" class="headerlink" title="3) Remember Infrastructure as Code"></a>3) Remember Infrastructure as Code</h2><h4 id="基础设施即代码有四项关键原则"><a href="#基础设施即代码有四项关键原则" class="headerlink" title="基础设施即代码有四项关键原则:"></a>基础设施即代码有四项关键原则:</h4><ul>
+<li><strong>再生性：</strong>环境中的任何元素可以轻松复制。</li>
+<li><strong>一致性：</strong>无论何时，创建的环境各个元素的配置是完全相同的。</li>
+<li><strong>快速反馈：</strong>能够频繁、容易地进行变更，并快速知道变更是否正确。</li>
+<li><strong>可见性：</strong>所有对环境的变更应该容易理解、<strong>可审计、受版本控制</strong>。</li>
+</ul>
+<h4 id="基础设施即代码的目标是："><a href="#基础设施即代码的目标是：" class="headerlink" title="基础设施即代码的目标是："></a>基础设施即代码的目标是：</h4><ul>
+<li><strong>标准化：</strong>以代码来定义环境，实现开发环境、测试环境、生产环境的标准化。</li>
+<li><strong>自动化：</strong>以自动化工具来驱动代码准备环境。包括创建环境、更新环境以及销毁环境。</li>
+<li><strong>可视化：</strong>以监控来可视化环境信息。环境当前状态可视、<strong>环境变更历史可视、可追溯</strong>。</li>
+</ul>
+<hr>
+<h2 id="4-Reference"><a href="#4-Reference" class="headerlink" title="4) Reference"></a>4) Reference</h2><ul>
+<li><a href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/" target="_blank" rel="noopener">https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/</a></li>
+<li><a href="https://infrastructure-as-code.com/book/" target="_blank" rel="noopener">https://infrastructure-as-code.com/book/</a></li>
+<li><a href="https://www.jianshu.com/p/89f681694326?from=timeline&amp;isappinstalled=0" target="_blank" rel="noopener">https://www.jianshu.com/p/89f681694326?from=timeline&amp;isappinstalled=0</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/Vuejs-应用配置-基路径.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/Vuejs-应用配置-基路径.html" class="post-title-link" itemprop="url">Vuejs 应用配置 基路径</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-07-06 13:03:21" itemprop="dateCreated datePublished" datetime="2019-07-06T13:03:21+08:00">2019-07-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-17 19:08:09" itemprop="dateModified" datetime="2020-11-17T19:08:09+08:00">2020-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>微前端有时需要地址上加上下文来区别应用，或者服务器资源有限在一个端口启动多个应用。</p>
+<blockquote>
+<p>例如：<a href="http://ixiaer.com/news/" target="_blank" rel="noopener">http://ixiaer.com/news/</a> ， <a href="http://ixiaer.com/game/" target="_blank" rel="noopener">http://ixiaer.com/game/</a></p>
+</blockquote>
+<hr>
+<h3 id="第1步，Vue-Router"><a href="#第1步，Vue-Router" class="headerlink" title="第1步，Vue Router"></a>第1步，Vue Router</h3><p>SPA 应用的 URL 并不是传统的，而是 Vue Router 模拟出来的。所以我们首先要修改 Vue Router 的配置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  base: <span class="string">'/news/'</span>, <span class="comment">// &lt;= 配置</span></span><br><span class="line">  routes: [&#123;</span><br><span class="line">    path: <span class="string">'/'</span>,</span><br><span class="line">    component: News</span><br><span class="line">  &#125;]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>对比存在的问题</th>
+<th>‘/‘</th>
+<th>‘/news/‘</th>
+<th>‘/game/‘</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>访问网址</td>
+<td><a href="http://ixiaer.com/" target="_blank" rel="noopener">http://ixiaer.com/</a></td>
+<td><a href="http://ixiaer.com/news/" target="_blank" rel="noopener">http://ixiaer.com/news/</a></td>
+<td><a href="http://ixiaer.com/game/" target="_blank" rel="noopener">http://ixiaer.com/game/</a></td>
+</tr>
+<tr>
+<td>图片资源</td>
+<td>/logo.png</td>
+<td>/logo.png</td>
+<td>/logo.png</td>
+</tr>
+<tr>
+<td>其他资源</td>
+<td>/*.{css,js,XHR}</td>
+<td>/*.{css,js,XHR}</td>
+<td>/*.{css,js,XHR}</td>
+</tr>
+</tbody>
+</table>
+<p>仅设置 base URL 时，只是在网址上看上去达到了效果，但代码内部的资源地址并不是预期的 /news/logo.png。<br>这样会导致启动服务后 logo.png 提示 404 错误，因为根目录中根本找不到 logo.png。</p>
+<hr>
+<h3 id="第2步，Webpack"><a href="#第2步，Webpack" class="headerlink" title="第2步，Webpack"></a>第2步，Webpack</h3><p>基于上面的问题，我们需要配置 Webpack 解决资源访问的问题。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">output: &#123;</span><br><span class="line">  path: path.resolve(__dirname, <span class="string">'dist'</span>),</span><br><span class="line">  publicPath: <span class="string">'/news/'</span> <span class="comment">// &lt;= 配置</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="第3步，webpack-dev-server"><a href="#第3步，webpack-dev-server" class="headerlink" title="第3步，webpack-dev-server"></a>第3步，webpack-dev-server</h3><p>如果是用 webpack-dev-server 中调试代码，需要修改如下配置才能正常访问。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> history = <span class="built_in">require</span>(<span class="string">'connect-history-api-fallback'</span>)</span><br><span class="line"></span><br><span class="line">devServer: &#123;</span><br><span class="line">  publicPath: <span class="string">'/news/'</span>, <span class="comment">// &lt;= 配置</span></span><br><span class="line">  before (app) &#123;</span><br><span class="line">    <span class="comment">// Only vue-router history mode setting</span></span><br><span class="line">    app.use(history(&#123;</span><br><span class="line">      index: <span class="string">'/news/'</span> + <span class="string">'index.html'</span> <span class="comment">// &lt;= 配置</span></span><br><span class="line">    &#125;))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="完整案例代码"><a href="#完整案例代码" class="headerlink" title="完整案例代码 - "></a>完整案例代码 - </h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br><span class="line">$ npm run serve</span><br><span class="line">$ npm run build</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/基于vuex的开发模式和使用方法.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/基于vuex的开发模式和使用方法.html" class="post-title-link" itemprop="url">基于vuex的开发模式和使用方法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-06-26 14:56:01" itemprop="dateCreated datePublished" datetime="2019-06-26T14:56:01+08:00">2019-06-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-17 19:08:09" itemprop="dateModified" datetime="2020-11-17T19:08:09+08:00">2020-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Vuex 是一个专为 Vue.js 应用程序开发的<strong>状态容器</strong>，提供<strong>可预测化的状态管理</strong>。可以让你构建一致化的应用，运行于不同的环境（客户端、服务器、原生应用），并且易于测试和超爽的开发体验。</p>
+</blockquote>
+<hr>
+<h3 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h3><p>随着应用开发日趋复杂，<strong>JavaScript 需要管理比任何时候都要多的 状态(state)</strong>。 这些 state 可能包括服务器响应、缓存数据、本地生成尚未持久化到服务器的数据，也包括 UI 状态，如激活的路由，被选中的标签，是否显示加载动效或者分页器等等。</p>
+<p>管理不断变化的 state 非常困难。如果一个 model 的变化会引起另一个 model 变化，那么当 view 变化时，就可能引起对应 model 以及另一个 model 的变化，依次地，可能会引起另一个 view 的变化。直至你搞不清楚到底发生了什么。<strong>state 在什么时候，由于什么原因，如何变化已然不受控制</strong>。 当系统变得错综复杂的时候，想重现问题或者添加新功能就会变得举步维艰。</p>
+<p>如果这还不够糟糕，考虑一些来自<strong>前端开发领域的新需求</strong>，如更新调优、服务端渲染、路由跳转前请求数据等等。</p>
+<p>这里的复杂性很大程度上来自于：我们总是将两个对人类思维非常难以<strong>推理</strong>(reason)的概念：<strong>变化</strong>(mutation)和<strong>异步</strong>(asynchronicity)。 我称它们为<a href="https://www.baidu.com/s?wd=曼妥思和可乐" target="_blank" rel="noopener">曼妥思和可乐</a>。如果把二者分开，能做的很好，但混到一起，就变得一团糟。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">a = 2</span><br><span class="line">a 3秒后变成 4</span><br><span class="line">b 1秒后变成 a</span><br><span class="line">c 2秒后变成 a + b</span><br><span class="line">答案：c = 4</span><br><span class="line"></span><br><span class="line">a = 2</span><br><span class="line">a 2秒后变成 4</span><br><span class="line">b 1秒后变成 a</span><br><span class="line">c 3秒后变成 a + b</span><br><span class="line">答案：c = 6</span><br><span class="line"></span><br><span class="line">a = 2</span><br><span class="line">a ?秒后变成 4</span><br><span class="line">b ?秒后变成 a</span><br><span class="line">c ?秒后变成 a + b</span><br><span class="line">答案： 爆炸</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="了解-Vuex"><a href="#了解-Vuex" class="headerlink" title="了解 Vuex"></a>了解 Vuex</h3><h5 id="核心概念："><a href="#核心概念：" class="headerlink" title="核心概念："></a>核心概念：</h5><ul>
+<li><p><strong>State</strong><br>整个应用的 state 被储存在一棵 object tree 中，并且这个 object tree 只存在于唯一一个 store 中。</p>
+</li>
+<li><p><strong>Mutation</strong><br><strong>变化</strong> store 中的 state 的唯一方法是提交 mutation。每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。这个回调函数就是我们实际进行状态更改的地方。<br>还记得<strong>变化和异步</strong>混在一起时会很糟糕吗，所以 Mutation <strong>必须是同步函数</strong>。</p>
+</li>
+<li><p><strong>Action</strong><br>Action 类似于 mutation，不同在于：Action 提交的是 mutation，而不是直接变更状态。Action 可以包含任意<strong>异步</strong>操作。</p>
+</li>
+<li><p><strong>Getter</strong><br>有时候我们需要从 store 中的 state 中派生出一些状态。如果有多个组件需要用到此属性，我们要么复制这个函数，或者抽取到一个共享函数然后在多处导入它——无论哪种方式都不是很理想。<br>定义“getter” 就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。</p>
+</li>
+<li><p><strong>Module</strong><br>由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。<br>为了解决以上问题，Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter。</p>
+</li>
+</ul>
+<h5 id="Vuex-“工作原理”-示意图："><a href="#Vuex-“工作原理”-示意图：" class="headerlink" title="Vuex “工作原理” 示意图："></a>Vuex “工作原理” 示意图：</h5><p><img src="images/vuex.png" alt="vuex.png"></p>
+<p><a href target="_blank" style="flex: 1;">运行代码</a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    age: <span class="number">0</span></span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">    UPDATE_AGE (state, newAge) &#123;</span><br><span class="line">      state.age = newAge</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  actions: &#123;</span><br><span class="line">    updateProfile (&#123; commit &#125;) &#123;</span><br><span class="line">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        commit(<span class="string">'UPDATE_AGE'</span>, <span class="number">18</span>)</span><br><span class="line">      &#125;, <span class="number">2000</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  getters: &#123;</span><br><span class="line">    stage: <span class="function"><span class="params">state</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> state.age &lt; <span class="number">18</span> ? <span class="string">'minor'</span> : <span class="string">'major'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">      &#123;&#123; age &#125;&#125; years old is &#123;&#123; stage &#125;&#125;.</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span>,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    age () &#123;</span><br><span class="line">      <span class="keyword">return</span> store.state.age</span><br><span class="line">    &#125;,</span><br><span class="line">    stage () &#123;</span><br><span class="line">      <span class="keyword">return</span> store.getters.stage</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    store.dispatch(<span class="string">'updateProfile'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="使用-Vuex-前后对比："><a href="#使用-Vuex-前后对比：" class="headerlink" title="使用 Vuex 前后对比："></a>使用 Vuex 前后对比：</h3><p><img src="images/flow.png" alt="flow.png"></p>
+<h5 id="用代码看前后对比："><a href="#用代码看前后对比：" class="headerlink" title="用代码看前后对比："></a>用代码看前后对比：</h5><div style="display: flex; flex-direction: row;"><br>  <div style="flex: 1;"><br>    <a href target="_blank">运行代码</a><br>    <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单项数据流</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div&gt;&#123;&#123; age &#125;&#125;&lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span>,</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      age: <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    <span class="keyword">this</span>.age = <span class="number">18</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><br><br>  </div><br>  <div style="flex: 1;"><br>    <a href target="_blank">运行代码</a><br>    <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 共享数据流</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div&gt;&#123;&#123; age &#125;&#125;&lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span>,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    age () &#123;</span><br><span class="line">      <span class="keyword">return</span> store.state.age</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted () &#123;</span><br><span class="line">    store.commit(<span class="string">'UPDATE_AGE'</span>, <span class="number">18</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    age: <span class="number">0</span></span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">    UPDATE_AGE (state, newAge) &#123;</span><br><span class="line">      state.age = newAge</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><br><br>  </div><br></div>
+
+<h5 id="单向数据流缺陷："><a href="#单向数据流缺陷：" class="headerlink" title="单向数据流缺陷："></a>单向数据流缺陷：</h5><p>当我们的应用遇到<strong>多个组件共享状态</strong>时，<strong>单向数据流</strong>的简洁性很容易被破坏：</p>
+<ul>
+<li><strong>多个视图依赖于同一状态</strong>。<br>传参的方法对于多层嵌套的组件将会非常繁琐，并且对于兄弟组件间的状态传递无能为力。<br>案例：<a href target="_blank">问题还原</a> | <a href target="_blank">传递状态</a> | <a href target="_blank">共享状态</a></li>
+<li><strong>来自不同视图的行为需要变更同一状态</strong>。<br>我们经常会采用父子组件直接引用或者通过事件来变更和同步状态的多份拷贝。以上的这些模式非常脆弱，通常会导致无法维护的代码。<br>案例：<a href target="_blank">问题还原</a> | <a href target="_blank">传递状态</a> | <a href target="_blank">共享状态</a></li>
+</ul>
+<hr>
+<h3 id="范式化-State"><a href="#范式化-State" class="headerlink" title="范式化 State"></a>范式化 State</h3><p>很多时候，我们会发现接口返回的信息是如下的深层嵌套的树形结构：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"id"</span>: <span class="string">"123"</span>,</span><br><span class="line">  <span class="attr">"author"</span>: &#123;</span><br><span class="line">    <span class="attr">"id"</span>: <span class="string">"1"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"Paul"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"title"</span>: <span class="string">"My awesome blog post"</span>,</span><br><span class="line">  <span class="attr">"comments"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"id"</span>: <span class="string">"324"</span>,</span><br><span class="line">      <span class="attr">"commenter"</span>: &#123;</span><br><span class="line">        <span class="attr">"id"</span>: <span class="string">"2"</span>,</span><br><span class="line">        <span class="attr">"name"</span>: <span class="string">"Nicole"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>假如直接把这样的结构存储在 store 中，如果想修改某个 commenter 的信息，我们需要一层层去遍历找到这个用户的信息，同时有可能这个用户的信息出现了多次，还需要把其他地方的用户信息也进行修改，每次遍历的过程会带来额外的性能开销。</p>
+<p>所以我们应 “<strong>设计范式化的 State</strong>”：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  result: "123",</span><br><span class="line">  entities: &#123;</span><br><span class="line">    "articles": &#123;</span><br><span class="line">      "123": &#123;</span><br><span class="line">        id: "123",</span><br><span class="line">        author: "1",</span><br><span class="line">        title: "My awesome blog post",</span><br><span class="line">        comments: [ "324" ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    "users": &#123;</span><br><span class="line">      "1": &#123; "id": "1", "name": "Paul" &#125;,</span><br><span class="line">      "2": &#123; "id": "2", "name": "Nicole" &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    "comments": &#123;</span><br><span class="line">      "324": &#123; id: "324", "commenter": "2" &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h5 id="范式化工具"><a href="#范式化工具" class="headerlink" title="范式化工具"></a>范式化工具</h5><p>因为 API 经常以嵌套的形式发送返回数据，所以该数据需要在引入状态树之前转化为规范化形态。Normalizr 库可以帮助你实现这个。你可以定义 schema 的类型和关系，将 schema 和响应数据提供给 <a href="https://github.com/paularmstrong/normalizr#quick-start" target="_blank" rel="noopener">normalizr</a>，他会输出响应数据的<strong>范式化</strong>变换。输出可以放在 action 中，用于 store 的更新。</p>
+<p>还有<a href="https://github.com/vuex-orm/vuex-orm" target="_blank" rel="noopener">Vuex-ORM</a> 库提供了一个非常有用的抽象层，用于管理 Vuex store 中存储的<strong>范式化</strong>数据。它允许你声明 Model 类并且定义他们之间的关系。然后它可以为你的数据类型生成新“表”，充当用于查找数据的特殊选择器工具，并且对数据执行不可变更新。</p>
+<p>管理<strong>范式化</strong>数据通常并不是简单的增加关系而是合并(Merge)，Vue的响应试需要深拷贝才能生效 - <a href="https://cn.vuejs.org/v2/guide/reactivity.html#检测变化的注意事项" target="_blank" rel="noopener">检测变化的注意事项</a>：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 代替 `Object.assign(this.someObject, &#123; a: 1, b: 2 &#125;)`</span></span><br><span class="line"><span class="keyword">this</span>.someObject = <span class="built_in">Object</span>.assign(&#123;&#125;, <span class="keyword">this</span>.someObject, &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="持久化-State"><a href="#持久化-State" class="headerlink" title="持久化 State"></a>持久化 State</h3><p>说道持久化我们会经常与storage做比较：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>vuex</th>
+<th>localstorage</th>
+<th>sessionstorage</th>
+<th>cookie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>响应试</strong></td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><a href="https://ssr.vuejs.org/zh/guide/universal.html#访问特定平台-platform-specific-api" target="_blank" title="Browser & Nodejs环境下都可以运行的代码"><strong>通用代码</strong></a></td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>存储类型</strong></td>
+<td>Object</td>
+<td>String</td>
+<td>String</td>
+<td>String</td>
+</tr>
+<tr>
+<td><strong>生命周期</strong></td>
+<td>刷新</td>
+<td>持久 (<em>跨浏览器</em>)</td>
+<td>关闭</td>
+<td>持久</td>
+</tr>
+</tbody>
+</table>
+<p>Vuex 刷新就会从内存中清理，有时我们需要在页面重新加载时保持并重新水化您的Vuex状态，<a href="https://github.com/robinvdvleuten/vuex-persistedstate" target="_blank" rel="noopener">vuex-persistedstate</a> 给了我们很好的解决方案。同时 Vuex 是需要付出性能代价的，所以应按需持久化。</p>
+<hr>
+<h3 id="什么情况下我应该使用-Vuex？"><a href="#什么情况下我应该使用-Vuex？" class="headerlink" title="什么情况下我应该使用 Vuex？"></a>什么情况下我应该使用 Vuex？</h3><p>Vuex 附带了更多的概念和框架，这需要对<strong>短期和长期效益进行权衡</strong>。如果您不打算开发中大型<strong>单页应用(SPA)</strong>，使用 Vuex 可能是繁琐冗余的。提升多人协作效率、长项目周期代码可维护性。却也提升了学习成本、前期项目周期等。</p>
+<p>纯粹技术角度看所有全新的、需重构的Vue <strong>单页应用(SPA)</strong> 项目都应该使用它。因为 Vuex 提升小项目扩展性、大项目维护性 和 构建一致化应用的能力。更重要的是在一次一次的项目中你会学会 Vuex 背后的技术思想。所谓技术<strong>难在思想并非编码</strong>。</p>
+<hr>
+<h3 id="Vuex-可能会改变开发模式"><a href="#Vuex-可能会改变开发模式" class="headerlink" title="Vuex 可能会改变开发模式"></a>Vuex 可能会改变开发模式</h3><p><img src="images/abstract.jpg" alt="abstract.jpg"></p>
+<p>现在前后端分工越来越模糊，有些后端需要做的事情前端用 Nodejs 能实现，所以写 Javascript 不一定是前端开发人员。腾讯 CloudBase 团队接口用 Nodejs 实现每天10亿次访问8TB日志量，字节跳动的 “飞书” 在 electron 平台用 Nodejs 开发桌面客户端，Google 用 WebAssembly 技术 c++ 语言开发的 <a href="https://squoosh.app/" target="_blank" rel="noopener">Squoosh</a> 有完整的 Web UI 界面。</p>
+<p><img src="images/mvvm.png" alt="mvvm.png"></p>
+<p>现在已经不能简单的用开发语言来明确 <strong>前端</strong> 还是 <strong>后端</strong>，需要 <strong>更多的知识纬度</strong> 会更加准确些。甚至有些时候已经分不清楚了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/什么是-Viewport.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/什么是-Viewport.html" class="post-title-link" itemprop="url">什么是 Viewport</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-06-24 18:11:59" itemprop="dateCreated datePublished" datetime="2019-06-24T18:11:59+08:00">2019-06-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-17 19:08:09" itemprop="dateModified" datetime="2020-11-17T19:08:09+08:00">2020-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>软硬件技术的高速发展成就了很多高分辨率的产品，但给用户带来了越来越小的内容（高分辨率 window 笔记本，应该深有体会）。<br>我们真正需要的用户体验是，高分辨率带来的 <strong>细腻的视觉体验</strong> 和不同尺寸屏幕下呢个看到 <strong>相同寸的内容</strong>。</p>
+<p><img src="images/diff.jpg" alt="diff.jpg"></p>
+<blockquote>
+<p>Viewport 他来了，他可以完美解决上述问题</p>
+</blockquote>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta" target="_blank" rel="noopener">MDN 解释</a>：它提供有关视口初始大小的提示，仅供移动设备使用。</li>
+<li>前端研发理解：<u>Viewport 将 px 单位从描述 <strong>设备像素</strong> 转成 <strong>CSS像素</strong>(无限接近物理尺寸)。</u></li>
+</ul>
+<hr>
+<h3 id="🤔-理论求证"><a href="#🤔-理论求证" class="headerlink" title="🤔 理论求证"></a>🤔 理论求证</h3><p>为了便于理解我准备了如下表格两个虚拟设备 A 和 B</p>
+<table>
+<thead>
+<tr>
+<th>设备</th>
+<th>设备像素</th>
+<th>CSS像素</th>
+<th>像素比DPR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设备A</td>
+<td>8 x 8</td>
+<td>4 x 4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>设备B</td>
+<td>4 x 4</td>
+<td>4 x 4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/viewport-demo.png" alt="viewport-demo.png"></p>
+<h5 id="像素并非像素"><a href="#像素并非像素" class="headerlink" title="像素并非像素"></a>像素并非像素</h5><p>近年来，屏幕分辨率已经涨到人眼难以区分单个像素大小的程度。例如，最近的智能手机通常具有5英寸屏幕，分辨率高达1920-1080像素（~400dpi）。因此，许多浏览器让每个 <strong>CSS像素</strong> 对应多个 <strong>硬件像素</strong> ，以便在很小的物理尺寸上显示的页面能看清楚。最初这样做在许多触控优化的网站上有可用性和可读性问题， Peter-Paul Koch 在 <a href="http://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html" target="_blank" rel="noopener">A pixel is not a pixel</a> 中写到过。</p>
+<p>在高 dpi 屏幕上，设备像素比(DPR) = 1 的页面将被浏览器有效缩放。他们的文字将是流畅和清晰的，但位图图像可能无法利用全屏分辨率。为了在这些屏幕上获得更清晰的图像，Web开发人员可能希望以比其最终大小更高的比例设计图像（或整个布局），然后使用CSS或视口属性缩小它们。这与<a href="http://www.w3.org/TR/CSS2/syndata.html#length-units" target="_blank" rel="noopener">CSS 2.1标准</a>一致。</p>
+<hr>
+<h3 id="📐原理图"><a href="#📐原理图" class="headerlink" title="📐原理图"></a>📐原理图</h3><p><img src="images/viewport.png" alt="viewport.png"></p>
+<hr>
+<h3 id="🤓-真机效果"><a href="#🤓-真机效果" class="headerlink" title="🤓 真机效果"></a>🤓 真机效果</h3><p><img src="images/iphone-diff.png" alt="iphone-diff.png"></p>
+<hr>
+<h3 id="🖥-如何获得设备参数"><a href="#🖥-如何获得设备参数" class="headerlink" title="🖥 如何获得设备参数"></a>🖥 如何获得设备参数</h3><p>获取设备参数网址：<a href="http://www.mydevice.io" target="_blank" rel="noopener">http://www.mydevice.io</a></p>
+<p><img src="images/mydevice.png" alt="mydevice.png"></p>
+<h5 id="或者用-Javascript-方法获得参数"><a href="#或者用-Javascript-方法获得参数" class="headerlink" title="或者用 Javascript 方法获得参数"></a>或者用 Javascript 方法获得参数</h5><ul>
+<li>DPR：window.devicePixelRatio</li>
+<li>size：screen.width 和 screen.height</li>
+<li>Root font size（1rem）：window.getComputedStyle(document.getElementsByTagName(“html”)[0]).fontSize</li>
+</ul>
+<hr>
+<h3 id="💎-分析设计师提供的设计稿"><a href="#💎-分析设计师提供的设计稿" class="headerlink" title="💎 分析设计师提供的设计稿"></a>💎 分析设计师提供的设计稿</h3><p><strong>1，了解要兼容的设备重要参数</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>iPhone 3gs</th>
+<th>iPhone SE</th>
+<th>iPhone 8 Plus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>设备像素 px</td>
+<td>480 x 320</td>
+<td>1136 x 640</td>
+<td>1920 x 1080</td>
+</tr>
+<tr>
+<td>CSS像素 px</td>
+<td>480 x 320</td>
+<td>568 x 320</td>
+<td>640 x 360</td>
+</tr>
+<tr>
+<td>DPR</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2，解读设计稿</strong></p>
+<p><img src="images/design.png" alt="design.png"></p>
+<p>a，标题字号为 <strong>150px</strong>，设计稿相对应的 DPR 是 3，所以实际在代码中要写 50px。<br><em>转换公式：</em><span style="color: red;">设备像素 / DPR = CSS像素</span></p>
+<p>b，位图不太一样，因为每个 <strong>CSS像素</strong> 由9个 <strong>设备像素</strong> 呈现，每个 <strong>设备像素</strong> 颜色都可以独立像素呈现不同颜色，选择比CSS像素大3倍像素的图片会非常细腻。<br>所以按照 DPR 提供 @3x @2x @1x 的切图，也可以只用最大尺寸的位图也是可以的，只不过对于低 DPR 的设备从服务器上获取位图增加了下载时间，但是实际效果却不会细腻。</p>
+<hr>
+<h3 id="💎-Viewport-改变了我们"><a href="#💎-Viewport-改变了我们" class="headerlink" title="💎 Viewport 改变了我们"></a>💎 Viewport 改变了我们</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>之前</th>
+<th>现在</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>位图</td>
+<td>对应容器宽高为100px的背景图用宽高100px的图片即可</td>
+<td>对应多个DPR的多种尺寸位图</td>
+</tr>
+<tr>
+<td>图标</td>
+<td>用雪碧图</td>
+<td>用自适应大小的iconfont/svg</td>
+</tr>
+<tr>
+<td>设计师</td>
+<td>设计师用位图软件设计 （Photoshop）</td>
+<td>设计师用矢量图设计单位是CSS像素单位<br>输出时工具会生成 1x 2x 3x 尺寸的位图（Sketch）</td>
+</tr>
+<tr>
+<td>兼容性</td>
+<td>之前只想着浏览器兼容</td>
+<td>还要思考兼容设备</td>
+</tr>
+<tr>
+<td>单位</td>
+<td>px, em, %</td>
+<td>px, rem, %, em, vw/vh/vmin/vmax, calc()</td>
+</tr>
+<tr>
+<td>布局</td>
+<td>float, flexbox</td>
+<td>element/bootstrap/… layout</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>未来是5G时代，任何东西都有可能安装屏幕。所以我们前端人应该面向未来。</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/webpack编译原理.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/webpack编译原理.html" class="post-title-link" itemprop="url">webpack编译原理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-04-04 10:15:00" itemprop="dateCreated datePublished" datetime="2019-04-04T10:15:00+08:00">2019-04-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-17 19:08:09" itemprop="dateModified" datetime="2020-11-17T19:08:09+08:00">2020-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="能说明Webpack的一张图"><a href="#能说明Webpack的一张图" class="headerlink" title="能说明Webpack的一张图"></a>能说明Webpack的一张图</h1><p><img src="images/webpack.png" alt="webpack.png"></p>
+<p>本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。</p>
+<p>首先 </p>
+<h1 id="最简单的Webpack配置"><a href="#最简单的Webpack配置" class="headerlink" title="最简单的Webpack配置"></a>最简单的Webpack配置</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout 0-master</span><br><span class="line">$ npm i -D webpack webpack-cli webpack-dev-server</span><br><span class="line">$ npx webpack-dev-server --open</span><br></pre></td></tr></table></figure>
+<p>从 webpack v4.0.0 开始，可以不用引入一个配置文件。然而，webpack 仍然还是高度可配置的。</p>
+<h1 id="打包-js"><a href="#打包-js" class="headerlink" title="打包 .js"></a>打包 .js</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout 1-simple-import</span><br><span class="line">$ npx webpack <span class="comment"># dist/main.js 会发现两个文件组合在一起</span></span><br><span class="line">$ npx webpack-dev-server --open <span class="comment"># npm run serve 相当于此命令的快捷方式</span></span><br></pre></td></tr></table></figure>
+<p><strong>作业：</strong><br>类似ES7这样的js高级语法在不同浏览器的兼容性是不同的，如何配置webpack来很好的控制浏览器兼容性。</p>
+<h1 id="打包-png"><a href="#打包-png" class="headerlink" title="打包 .png"></a>打包 .png</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout 2-url-loader</span><br><span class="line">$ npm i -D url-loader file-loader</span><br><span class="line">$ npm run build <span class="comment"># dist/main.js 中图片已经变成了base64字符串，被js写入html的&lt;img src="base64..."&gt;</span></span><br><span class="line">$ npm run serve</span><br></pre></td></tr></table></figure>
+<p><strong>作业：</strong><br>main.js中icon.png改成icon.jpg，运行正常。</p>
+<blockquote>
+<p>webpack载入文件都需要对应的loader！</p>
+</blockquote>
+<h1 id="打包-css"><a href="#打包-css" class="headerlink" title="打包 .css"></a>打包 .css</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout 3-css-loader</span><br><span class="line">$ npm i -D css-loader style-loader</span><br><span class="line">$ npm run build</span><br><span class="line">$ npm run serve</span><br></pre></td></tr></table></figure>
+<ol>
+<li>css-loader加载，export css文件的字符串</li>
+<li>style-loader加载css字符串用style标签写入html</li>
+<li>url-loader加载css内的png图片</li>
+</ol>
+<p><strong>体验style-loader</strong><br><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@ main.js</span><br><span class="line"><span class="deletion">- document.write(`&lt;style type="text/css"&gt;$&#123;style&#125;&lt;/style&gt;`)</span></span><br><span class="line"></span><br><span class="line">@ webpack.config.js</span><br><span class="line"><span class="addition">+ 'style-loader'</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>作业</strong><br>上面都是把css字符串写入html中，请使用mini-css-extract-plugin生成.css文件引入到html。</p>
+<h1 id="打包-vue"><a href="#打包-vue" class="headerlink" title="打包 .vue"></a>打包 .vue</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout 4-vue-loader</span><br><span class="line">$ npm i -D vue-loader vue-template-compiler</span><br><span class="line">$ npm run serve</span><br></pre></td></tr></table></figure>
+<ol>
+<li>vue-loader 加载.vue<ul>
+<li>template和script标签被转译成 <a href="https://cn.vuejs.org/v2/guide/render-function.html#createElement-参数" target="_blank" rel="noopener">createElement渲染函数</a></li>
+<li>style标签生成.css</li>
+</ul>
+</li>
+<li>css-loader 处理 .css 文件</li>
+<li>url-loader 处理 .png 文件</li>
+</ol>
+<p><strong>体验createElement渲染函数</strong><br><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">- import App from './App.vue'</span></span><br><span class="line"><span class="deletion">- new Vue(&#123;</span></span><br><span class="line"><span class="deletion">-   el: '#app',</span></span><br><span class="line"><span class="deletion">-   render: function (h) &#123;</span></span><br><span class="line"><span class="deletion">-     return h(App)</span></span><br><span class="line"><span class="deletion">-   &#125;</span></span><br><span class="line"><span class="deletion">- &#125;)</span></span><br><span class="line"></span><br><span class="line"><span class="addition">+ import './style.css'</span></span><br><span class="line"><span class="addition">+ new Vue(&#123;</span></span><br><span class="line"><span class="addition">+   el: '#app',</span></span><br><span class="line"><span class="addition">+   render: function (createElement) &#123;</span></span><br><span class="line"><span class="addition">+     return createElement('div', '你好世界。')</span></span><br><span class="line"><span class="addition">+   &#125;</span></span><br><span class="line"><span class="addition">+ &#125;)</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>作业：</strong><br>现在已经知道.vue在webpack中被转译成createElement渲染函数被浏览器执行。<br>请使用 <a href="https://cn.vuejs.org/v2/guide/render-function.html#JSX" target="_blank" rel="noopener">jsx</a> 编写vue单文件组件，jsx比vue文件更接近javascript真实的语法对技术领悟会更深，并且技术栈会增加React可以随意使用React或Vue来做项目。</p>
+<h1 id="领悟Webpack"><a href="#领悟Webpack" class="headerlink" title="领悟Webpack"></a>领悟Webpack</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout 5-vue-react</span><br><span class="line">$ npm i react react-dom</span><br><span class="line">$ npm i -D @babel/core @babel/preset-react babel-loader</span><br><span class="line">$ npm run serve</span><br></pre></td></tr></table></figure>
+<p><strong>知识点</strong></p>
+<ul>
+<li>vue和react两个webpack入口</li>
+<li>babel-loader加载.js文件并解析jsx语法</li>
+<li><a href="https://github.com/kimseongrim/hivue" target="_blank" rel="noopener">点击下载</a> 完整的Webpack配置工程提供给大家冲浪</li>
+</ul>
+<p><strong>作业</strong><br>把react app嵌入vue app中，当子组件使用。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p><strong>诚邀加入《前端兴趣小组》 课题是《Web产品模块化》</strong></p>
+<p>做研发就如打游戏，会玩Dota的人玩王者荣耀很容易就能上手。<br>只要掌握研发中的规则学习之路会四通发达！</p>
+<p><img src="images/user-fe-be.png" alt="user-fe-be.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/rem和px单位的区别.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/rem和px单位的区别.html" class="post-title-link" itemprop="url">rem 和 px 单位的区别</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-29 14:41:42" itemprop="dateCreated datePublished" datetime="2019-03-29T14:41:42+08:00">2019-03-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-17 19:08:09" itemprop="dateModified" datetime="2020-11-17T19:08:09+08:00">2020-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1rem"><a href="#1rem" class="headerlink" title="1rem"></a>1rem</h1><p>w3c描述rem为：font size of the root element. (html标签font-size = 1rem)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>inherit root element font-size<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"is-rem"</span>&gt;</span>font-size rem<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"is-px"</span>&gt;</span>font-size px<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">.is-rem &#123; font-size: 1rem;&#125;</span></span><br><span class="line"><span class="undefined">.is-px &#123; font-size: 16px; &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以上代码在Chrome浏览器中文字大小是一致的，但是在浏览器设置 <strong>字号改成”特大”</strong> 后 1rem 设置的字体变得很大、px设置的字体则没有变化，原因是 html 上默认 font-size 被浏览器设置的很大。</p>
+<h1 id="rem-和响应式完全没关系"><a href="#rem-和响应式完全没关系" class="headerlink" title="rem 和响应式完全没关系"></a>rem 和响应式完全没关系</h1><h5 id="Bootstrap-是用-px-来做屏幕区分"><a href="#Bootstrap-是用-px-来做屏幕区分" class="headerlink" title="Bootstrap 是用 px 来做屏幕区分"></a>Bootstrap 是用 px 来做屏幕区分</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* breakpoint-sm */</span></span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">576px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123; <span class="attribute">background</span>: red; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* breakpoint-md */</span></span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123; <span class="attribute">background</span>: green; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* breakpoint-lg */</span></span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">992px</span>) &#123;</span><br><span class="line">  <span class="selector-tag">body</span> &#123; <span class="attribute">background</span>: orange; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="ElementUI-是完全使用-px，并没有使用-rem"><a href="#ElementUI-是完全使用-px，并没有使用-rem" class="headerlink" title="ElementUI 是完全使用 px，并没有使用 rem"></a>ElementUI 是完全使用 px，并没有使用 rem</h5><p>ElementUI做响应式App非常优秀。</p>
+<h1 id="rem-其实是为了用户体验"><a href="#rem-其实是为了用户体验" class="headerlink" title="rem 其实是为了用户体验"></a>rem 其实是为了用户体验</h1><p>在欧美国家非常重视用户体验，残障人士的用户体验也是非常重视也有法规来保护弱势群体。<br>比如：tts(text to speech)是为视力缺陷者提供的文字转语音的服务，浏览器设置中的字号也是为视力缺陷者提供的非常重要的服务。</p>
+<h4 id="反用户体验，被妖魔化的-rem"><a href="#反用户体验，被妖魔化的-rem" class="headerlink" title="反用户体验，被妖魔化的 rem"></a>反用户体验，被妖魔化的 rem</h4><p>有很多的老文章用 flexible.js 或者 rem.js 等包来完成rem自适应功能，甚至有很多人基于此类思想写了各种各样的奇怪的包。<br><a href="https://github.com/amfe/lib-flexible" target="_blank" rel="noopener">amfe-flexible</a> 是 Alibaba MFE 团队在2016年 flexible 自适应布局中使用了 rem 单位，并且对 html 标签中的 font-size 做了动态计算。当时这种做法很超前非常不错，但是在2018年1月宣布建议用户使用viewport方案。</p>
+<p>但是百度上搜索rem时依然出现很多 flexible.js 方案误导。rem.js 会动态设置 html 标签上的 font-size，会导致系统/浏览器设置的字体大小不会生效，视觉残障人士可用性被扼杀。在则浏览器窗口发生改变时一直在重新计算所有的 rem 单位数值降低性能。</p>
+<p>甚至有些团队设置 font-size:10px，只是为了写代码时 px 与 rem 换算方便而已，这岂不是对视力残障人士的一种不负责任？</p>
+<p><img src="images/mangren.jpg" alt="mangren.jpg"></p>
+<h1 id="什么时候应该用-rem？"><a href="#什么时候应该用-rem？" class="headerlink" title="什么时候应该用 rem？"></a>什么时候应该用 rem？</h1><ul>
+<li>文字应该使用 rem 单位</li>
+<li>细线、位图使用 px 单位</li>
+<li>布局请不要持用 rem 或者 px，而是选择 element/bootstrap/… 框架中的 layout</li>
+</ul>
+<p><img src="images/user-fe-be.png" alt="user-fe-be.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/code-lint-配置与使用.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/code-lint-配置与使用.html" class="post-title-link" itemprop="url">code lint 配置与使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-25 10:09:05" itemprop="dateCreated datePublished" datetime="2019-03-25T10:09:05+08:00">2019-03-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-17 19:08:09" itemprop="dateModified" datetime="2020-11-17T19:08:09+08:00">2020-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="F2E代码检查标准"><a href="#F2E代码检查标准" class="headerlink" title="F2E代码检查标准"></a>F2E代码检查标准</h2><p><a href="https://www.icloud.com/keynote/0oBgKUHk13Cm-5D-5ccvduP5A#F2E%E4%BB%A3%E7%A0%81%E6%A3%80%E6%9F%A5" target="_blank" rel="noopener">点击查看</a></p>
+<h2 id="部署与配置"><a href="#部署与配置" class="headerlink" title="部署与配置"></a>部署与配置</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># eslint</span></span><br><span class="line">npm i -D eslint eslint-plugin-import eslint-plugin-node eslint-plugin-promise</span><br><span class="line"><span class="comment"># eslint 解析器</span></span><br><span class="line">npm i -D babel-eslint vue-eslint-parser</span><br><span class="line"><span class="comment"># eslint 规范</span></span><br><span class="line">npm i -D eslint-config-canonical-jsdoc eslint-config-standard eslint-plugin-standard eslint-plugin-vue</span><br><span class="line"><span class="comment"># stylelint for css &amp; scss, and autoprefixer</span></span><br><span class="line">npm i -D stylelint stylelint-scss stylelint-config-recommended-scss autoprefixer</span><br><span class="line"><span class="comment"># git 相关工具</span></span><br><span class="line">npm i -D husky lint-staged imagemin-lint-staged</span><br><span class="line"><span class="comment"># webpack loader</span></span><br><span class="line">npm i -D eslint-loader postcss-loader</span><br></pre></td></tr></table></figure>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>My Project<br>|- .huskyrc.js<br>|- .editorconfig<br>|- .eslintrc.js<br>|- .stylelintrc.js<br>|- lint-staged.config.js<br>|- postcss.config.js<br>|- package.json</p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .huskyrc.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  hooks: &#123;</span><br><span class="line">    <span class="string">'pre-commit'</span>: <span class="string">'lint-staged'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .editorconfig，Atom/VS Code/Webstrom/Sublime text都有相应的插件读取此文件</span></span><br><span class="line">root = <span class="literal">true</span></span><br><span class="line">[*]</span><br><span class="line">charset = utf<span class="number">-8</span></span><br><span class="line">indent_style = space</span><br><span class="line">indent_size = <span class="number">2</span></span><br><span class="line">end_of_line = lf</span><br><span class="line">insert_final_newline = <span class="literal">true</span></span><br><span class="line">max_line_length = off</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.eslintrc.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  parser: <span class="string">'vue-eslint-parser'</span>,</span><br><span class="line">  parserOptions: &#123;</span><br><span class="line">      parser: <span class="string">'babel-eslint'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  extends: [</span><br><span class="line">    <span class="string">'plugin:vue/recommended'</span>,</span><br><span class="line">    <span class="string">'standard'</span>,</span><br><span class="line">    <span class="string">'canonical-jsdoc'</span></span><br><span class="line">  ],</span><br><span class="line">  rules: &#123;</span><br><span class="line">    <span class="string">'no-console'</span>: process.env.NODE_ENV === <span class="string">'production'</span> ? <span class="string">'error'</span> : <span class="string">'off'</span>,</span><br><span class="line">    <span class="string">'no-debugger'</span>: process.env.NODE_ENV === <span class="string">'production'</span> ? <span class="string">'error'</span> : <span class="string">'off'</span>,</span><br><span class="line">    <span class="string">'no-alert'</span>: process.env.NODE_ENV === <span class="string">'production'</span> ? <span class="string">'error'</span> : <span class="string">'off'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  env: &#123;</span><br><span class="line">    browser: <span class="literal">true</span>,</span><br><span class="line">    es6: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .stylelintrc.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  extends: [</span><br><span class="line">    <span class="string">'stylelint-config-recommended-scss'</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lint-staged.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  linters: &#123;</span><br><span class="line">    <span class="string">'*.&#123;js,vue&#125;'</span>: [<span class="string">'eslint --fix'</span>, <span class="string">'git add'</span>],</span><br><span class="line">    <span class="string">'*.&#123;vue,htm,html,css,sss,less,scss,sass&#125;'</span>: [<span class="string">'stylelint --fix'</span>, <span class="string">'git add'</span>],</span><br><span class="line">    <span class="string">'*.&#123;png,jpeg,jpg,gif,svg&#125;'</span>: [<span class="string">'imagemin-lint-staged'</span>, <span class="string">'git add'</span>]</span><br><span class="line">  &#125;,</span><br><span class="line">  ignore: [<span class="string">'*.min.&#123;js,css&#125;'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// postcss.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="built_in">require</span>(<span class="string">'stylelint'</span>),</span><br><span class="line">    <span class="built_in">require</span>(<span class="string">'autoprefixer'</span>)</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"><span class="keyword">const</span> prod = process.env.NODE_ENV === <span class="string">'production'</span></span><br><span class="line">...</span><br><span class="line">rules: [</span><br><span class="line">  &#123;</span><br><span class="line">    enforce: <span class="string">'pre'</span>,</span><br><span class="line">    test: <span class="regexp">/\.(js|vue)$/</span>,</span><br><span class="line">    loader: <span class="string">'eslint-loader'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">    use: [</span><br><span class="line">      <span class="string">'vue-style-loader'</span>,</span><br><span class="line">      <span class="string">'css-loader'</span>,</span><br><span class="line">      <span class="string">'postcss-loader'</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    test: <span class="regexp">/\.scss$/</span>,</span><br><span class="line">    use: [</span><br><span class="line">      <span class="string">'vue-style-loader'</span>,</span><br><span class="line">      <span class="string">'css-loader'</span>,</span><br><span class="line">      <span class="string">'sass-loader'</span>,</span><br><span class="line">      <span class="string">'postcss-loader'</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h3 id="完整示例"><a href="#完整示例" class="headerlink" title="完整示例"></a>完整示例</h3><p><a href="https://github.com/kimseongrim/hivue/tree/dev" target="_blank" rel="noopener">https://github.com/kimseongrim/hivue/tree/dev</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://blog.ixiaer.com/commitlint-standard-version-配置与使用.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/favicon.png">
+      <meta itemprop="name" content="夏尔猫叔">
+      <meta itemprop="description" content="前端工程师技术文章">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夏尔猫叔's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/commitlint-standard-version-配置与使用.html" class="post-title-link" itemprop="url">commitlint & standard-version 配置与使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-25 09:48:41" itemprop="dateCreated datePublished" datetime="2019-03-25T09:48:41+08:00">2019-03-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-17 19:08:09" itemprop="dateModified" datetime="2020-11-17T19:08:09+08:00">2020-11-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="F2E版本管理标准"><a href="#F2E版本管理标准" class="headerlink" title="F2E版本管理标准"></a>F2E版本管理标准</h2><p><a href="https://www.icloud.com/keynote/0x4LpFsy0Kgpd46Nnyh0i-34Q#F2E_%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6" target="_blank" rel="noopener">点击查看</a></p>
+<h2 id="部署与配置"><a href="#部署与配置" class="headerlink" title="部署与配置"></a>部署与配置</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># commitlint</span></span><br><span class="line">npm i -D @commitlint/config-conventional @commitlint/cli</span><br><span class="line"><span class="comment"># git hook 客户端</span></span><br><span class="line">npm i -D husky</span><br><span class="line"><span class="comment"># 版本升级，自动编写changelog，自动打tag工具</span></span><br><span class="line">npm i -D standard-version</span><br><span class="line"><span class="comment"># index.html 生成工具</span></span><br><span class="line">npm i -D html-webpack-plugin</span><br></pre></td></tr></table></figure>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>My Project<br>|- public<br>| |- index.html<br>|- .huskyrc.js<br>|- commitlint.config.js<br>|- package.json<br>|- webpack.config.js</p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .huskyrc.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  hooks: &#123;</span><br><span class="line">    <span class="string">'commit-msg'</span>: <span class="string">'commitlint -E HUSKY_GIT_PARAMS'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// commitlint.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  extends: [<span class="string">'@commitlint/config-conventional'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// package.json</span><br><span class="line">"scripts": &#123;</span><br><span class="line">  "release": "standard-version",</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// index.html</span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"version"</span> <span class="attr">content</span>=<span class="string">"&lt;%= htmlWebpackPlugin.options.meta.version %&gt;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line">plugins: [</span><br><span class="line">  <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">    template: <span class="string">'public/index.html'</span>,</span><br><span class="line">    meta: &#123; <span class="attr">version</span>: process.env.npm_package_version &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h3 id="Git-message格式"><a href="#Git-message格式" class="headerlink" title="Git message格式"></a>Git message格式</h3><p>type(scope?): subject</p>
+<h6 id="type解释"><a href="#type解释" class="headerlink" title="type解释"></a>type解释</h6><ul>
+<li>build：构建相关</li>
+<li>ci：持续集成</li>
+<li>chore：零星工作</li>
+<li>docs：文档</li>
+<li>feat：功能</li>
+<li>fix：缺陷修复</li>
+<li>perf：性能</li>
+<li>refactor：重构</li>
+<li>revert：还原</li>
+<li>style：风格</li>
+<li>test：测试</li>
+</ul>
+<h6 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h6><p>fix(login): support sso login #1100</p>
+<h3 id="CI构建"><a href="#CI构建" class="headerlink" title="CI构建"></a>CI构建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install</span></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1.0.0 &gt; 1.0.1</span></span><br><span class="line">npm run release</span><br><span class="line"><span class="comment"># 1.0.0 &gt; 1.0.1-0</span></span><br><span class="line"><span class="comment"># npm run release -- --prerelease</span></span><br><span class="line"><span class="comment"># 1.0.0 &gt; 1.0.1-alpha.0 ，alpha是自定义的可以写任意文字，比如：beta</span></span><br><span class="line"><span class="comment"># npm run release -- --prerelease alpha</span></span><br><span class="line"><span class="comment"># 1.0.0 &gt; 1.1.0</span></span><br><span class="line"><span class="comment"># npm run release -- --release-as minor</span></span><br><span class="line"><span class="comment"># 1.0.0 &gt; 2.0.0</span></span><br><span class="line"><span class="comment"># npm run release -- --release-as major</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># push tag to remote</span></span><br><span class="line">git push --follow-tags</span><br><span class="line"></span><br><span class="line"><span class="comment"># build</span></span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+<h3 id="示例项目"><a href="#示例项目" class="headerlink" title="示例项目"></a>示例项目</h3><p><a href="https://github.com/kimseongrim/hivue/tree/dev" target="_blank" rel="noopener">https://github.com/kimseongrim/hivue/tree/dev</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="夏尔猫叔"
+      src="/favicon.png">
+  <p class="site-author-name" itemprop="name">夏尔猫叔</p>
+  <div class="site-description" itemprop="description">前端工程师技术文章</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">夏尔猫叔</span>
+</div>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
