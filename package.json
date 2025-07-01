@@ -1,0 +1,12 @@
+{
+  "name": "gimjin.github.io",
+  "version": "1.0.0",
+  "author": "gimjin",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx marked -i index.md -o index.html"
+  },
+  "devDependencies": {
+    "marked": "^16.0.0"
+  }
+}
